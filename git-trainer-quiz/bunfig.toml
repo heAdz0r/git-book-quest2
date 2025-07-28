@@ -1,0 +1,21 @@
+[install]
+# Настройки установки пакетов
+cache = true
+exact = false
+production = false
+
+[install.scopes]
+# Настройки для scoped packages
+
+[build]
+# Настройки сборки
+target = "browser"
+format = "esm"
+splitting = true
+minify = true
+sourcemap = true
+
+[dev]
+# Настройки для режима разработки
+port = 3000
+hot = true

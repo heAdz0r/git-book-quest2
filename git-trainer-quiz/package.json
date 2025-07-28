@@ -1,0 +1,36 @@
+{
+  "name": "git-trainer-quiz",
+  "version": "1.0.0",
+  "description": "Интерактивная система обучения Git - проверка знаний после выполнения заданий тренажера",
+  "main": "src/App.jsx",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run server.js",
+    "build": "bun build src/App.jsx --outdir=dist --target=browser --minify --sourcemap",
+    "build:dev": "bun build src/App.jsx --outdir=dist --target=browser --sourcemap",
+    "start": "bun run server.js",
+    "serve": "bun run server.js",
+    "preview": "bun run --cwd dist ../server.js",
+    "test": "bun test",
+    "update-answers": "node scripts/update-answers.cjs",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  },
+  "keywords": [
+    "git",
+    "training",
+    "quiz",
+    "education",
+    "flant"
+  ],
+  "author": "Флант",
+  "license": "MIT"
+}

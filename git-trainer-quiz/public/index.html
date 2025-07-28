@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Интерактивный тренажер Git для коммерческого департамента Флант. Изучайте Git на практических примерах работы с коммерческими предложениями.">
+    <meta name="keywords" content="Git, обучение, Флант, коммерческий департамент, версионный контроль">
+    <meta name="author" content="Флант">
+    <title>Git Тренажер - Коммерческий департамент | Флант</title>
+    <link rel="stylesheet" href="/src/styles/main.css?v=2025-01-28-17-05">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* Loading styles */
+        #root {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .loading {
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #495057;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e9ecef;
+            border-top: 4px solid #0066cc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="loading">
+            <div class="loading-spinner"></div>
+            <p>Загрузка Git тренажера...</p>
+        </div>
+    </div>
+
+    <!-- React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+
+    <!-- Application code -->
+    <script type="text/babel" src="/src/data/questions.js"></script>
+    <script type="text/babel" src="/src/data/encryptedAnswers.js"></script>
+    <script type="text/babel" src="/src/utils/answerValidator.js"></script>
+    <script type="text/babel" src="/src/components/QuestionComponent.jsx"></script>
+    <script type="text/babel" src="/src/components/ProgressIndicator.jsx"></script>
+    <script type="text/babel" src="/src/components/VictoryPage.jsx"></script>
+    <script type="text/babel" src="/src/components/ResultsDisplay.jsx"></script>
+    <script type="text/babel" src="/src/components/QuizContainer.jsx"></script>
+    <script type="text/babel" src="/src/App.jsx"></script>
+</body>
+
+</html>
